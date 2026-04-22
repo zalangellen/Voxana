@@ -13,17 +13,17 @@ export default function App() {
   useTheme()
 
   return (
-    <div className="layout">
+    <>
       <Topbar />
-      <div className="main-wrap">
+      <div className="app">
         <Sidebar />
-        <div className="content">
+        <main className="main">
           <StepSpecialty active={step === 1} />
           <StepDictation active={step === 2} />
           <StepDocuments active={step === 3} />
           <StepReview active={step === 4} />
-        </div>
+        </main>
       </div>
-    </div>
+    </>
   )
 }
