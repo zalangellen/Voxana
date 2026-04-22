@@ -2,6 +2,7 @@ import { create } from 'zustand'
 
 const useStore = create((set) => ({
   step: 1,
+  showAbout: false,
   specialty: null,
   clips: [],
   currentCat: 'general',
@@ -20,7 +21,8 @@ const useStore = create((set) => ({
   sdocs: [],
   approved: false,
 
-  setStep: (step) => set({ step }),
+  setStep: (step) => set({ step, showAbout: false }),
+  setShowAbout: (showAbout) => set({ showAbout }),
   setSpecialty: (specialty) => set({ specialty }),
   setCurrentCat: (cat) => set({ currentCat: cat }),
 
