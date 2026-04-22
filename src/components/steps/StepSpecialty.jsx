@@ -27,6 +27,14 @@ export default function StepSpecialty({ active }) {
             </div>
           ))}
         </div>
+        <div className="spec-more-notice">
+          <svg viewBox="0 0 14 14" fill="none">
+            <circle cx="7" cy="7" r="5.5" stroke="currentColor" strokeWidth="1.3"/>
+            <path d="M7 4.5v3" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/>
+            <circle cx="7" cy="9.2" r=".55" fill="currentColor" stroke="none"/>
+          </svg>
+          More specialties — including Internal Medicine, Paediatrics, Pulmonology, and others — are currently in development and will be added soon.
+        </div>
         <div className="btn-row" style={{ justifyContent: 'flex-start' }}>
           <button className="btn btn-p" disabled={!specialty} onClick={() => setStep(2)}>
             Continue to dictation →

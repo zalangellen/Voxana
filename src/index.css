@@ -280,6 +280,17 @@ button, select, textarea, input { font-family: var(--font); }
 .spec-name, .specialty-name { font-size: 13px; font-weight: 600; color: var(--text1); margin-bottom: 3px; letter-spacing: -0.2px; }
 .spec-desc, .specialty-desc { font-size: 11px; color: var(--text4); line-height: 1.45; font-weight: 400; }
 
+/* "More specialties coming" notice */
+.spec-more-notice {
+  display: flex; align-items: flex-start; gap: 8px;
+  margin-top: 4px; margin-bottom: 4px;
+  padding: 10px 14px; border-radius: var(--r);
+  background: var(--raised); border: 1px solid var(--border);
+  font-size: 12px; color: var(--text4); line-height: 1.55;
+  letter-spacing: -0.1px; max-width: 480px;
+}
+.spec-more-notice svg { width: 13px; height: 13px; flex-shrink: 0; margin-top: 1px; color: var(--text4); }
+
 /* ── NOTICES ────────────────────────────────────────────────── */
 .notice {
   display: flex; align-items: flex-start; gap: 9px;
