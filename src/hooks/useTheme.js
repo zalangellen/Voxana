@@ -3,7 +3,7 @@ import { useCallback, useEffect } from 'react'
 export function useTheme() {
   useEffect(() => {
     try {
-      const saved = localStorage.getItem('voxsana-theme')
+      const saved = localStorage.getItem('voxana-theme')
       if (saved) document.documentElement.setAttribute('data-theme', saved)
     } catch {}
   }, [])
@@ -12,7 +12,7 @@ export function useTheme() {
     const html = document.documentElement
     const next = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light'
     html.setAttribute('data-theme', next)
-    try { localStorage.setItem('voxsana-theme', next) } catch {}
+    try { localStorage.setItem('voxana-theme', next) } catch {}
   }, [])
 
   return { toggle }

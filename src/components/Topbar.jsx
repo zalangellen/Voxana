@@ -10,9 +10,9 @@ export default function Topbar() {
     <header className="topbar">
       <a className="logo" href="#">
         <div className="logo-mark">
-          <img src="/logo.png" alt="VoxSana" />
+          <img src="/logo.png" alt="Voxana" />
         </div>
-        <span className="logo-name">Vox<b>Sana</b></span>
+        <span className="logo-name">Vox<b>ana</b></span>
       </a>
       <div className="topbar-sep" />
       <span className="topbar-session">Medical documentation</span>

@@ -82,7 +82,7 @@ export default function RecordCard() {
   return (
     <div className="rec-card">
       <div className="card-title">Record a clip</div>
-      <div className="card-desc">Press and dictate. VoxSana classifies each clip into the correct section as you speak.</div>
+      <div className="card-desc">Press and dictate. Voxana classifies each clip into the correct section as you speak.</div>
 
       <div className="rec-stage">
         <button className={`rec-btn-main ${isRec ? 'rec' : ''}`} onClick={isRec ? stopRec : startRec}>
