@@ -1,13 +1,18 @@
 import { SPEC } from '../constants.jsx'
 
-const API = 'https://api.anthropic.com/v1/messages'
-const MODEL = 'claude-sonnet-4-20250514'
+const ENDPOINT = '/api/claude'
+const MODEL = 'claude-opus-4-5'
 
 async function callClaude(system, userContent, maxTokens = 2000) {
-  const r = await fetch(API, {
+  const r = await fetch(ENDPOINT, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ model: MODEL, max_tokens: maxTokens, system, messages: [{ role: 'user', content: userContent }] }),
+    body: JSON.stringify({
+      model: MODEL,
+      max_tokens: maxTokens,
+      system,
+      messages: [{ role: 'user', content: userContent }],
+    }),
   })
   const data = await r.json()
   const text = data?.content?.[0]?.text ?? ''
@@ -44,7 +49,7 @@ export async function runProcess({ specialty, clips, tFiles, pFiles }) {
   content.push({ type: 'text', text: txt })
 
   const result = await callClaude(sysP, content, 2000)
-  return { parsed: result ?? { fields: [{ label: 'Note', value: 'API connection required.', source: '' }] }, mergedTx, sdocs }
+  return { parsed: result ?? { fields: [{ label: 'Note', value: 'Processing failed — check server logs.', source: '' }] }, mergedTx, sdocs }
 }
 
 export async function regenerateField({ fieldLabel, specialty, mergedTx, sdocs }) {
