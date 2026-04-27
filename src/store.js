@@ -4,6 +4,7 @@ const useStore = create((set) => ({
   showLanding: true,
   step: 1,
   showAbout: false,
+  showTeam: false,
   specialty: null,
   clips: [],
   currentCat: 'general',
@@ -23,8 +24,9 @@ const useStore = create((set) => ({
   approved: false,
 
   setShowLanding: (showLanding) => set({ showLanding }),
-  setStep: (step) => set({ step, showAbout: false }),
-  setShowAbout: (showAbout) => set({ showAbout }),
+  setStep: (step) => set({ step, showAbout: false, showTeam: false }),
+  setShowAbout: (showAbout) => set({ showAbout, showTeam: false }),
+  setShowTeam: (showTeam) => set({ showTeam, showAbout: false }),
   setSpecialty: (specialty) => set({ specialty }),
   setCurrentCat: (cat) => set({ currentCat: cat }),
 

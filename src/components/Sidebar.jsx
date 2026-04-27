@@ -12,6 +12,8 @@ export default function Sidebar() {
   const setStep   = useStore((s) => s.setStep)
   const showAbout = useStore((s) => s.showAbout)
   const setShowAbout = useStore((s) => s.setShowAbout)
+  const showTeam = useStore((s) => s.showTeam)
+  const setShowTeam = useStore((s) => s.setShowTeam)
 
   const getState = (n) => {
     if (n < step) return 'completed'
@@ -59,7 +61,7 @@ export default function Sidebar() {
         </div>
       </div>
 
-      {/* ── About link ── */}
+      {/* ── About links ── */}
       <div className="sb-bottom">
         <button
           className={`sb-about-btn${showAbout ? ' active' : ''}`}
@@ -71,6 +73,18 @@ export default function Sidebar() {
             <circle cx="7" cy="4.8" r=".6" fill="currentColor" stroke="none"/>
           </svg>
           About Voxana
+        </button>
+        <button
+          className={`sb-about-btn${showTeam ? ' active' : ''}`}
+          onClick={() => setShowTeam(!showTeam)}
+        >
+          <svg viewBox="0 0 14 14" fill="none">
+            <circle cx="5" cy="4.5" r="2" stroke="currentColor" strokeWidth="1.4"/>
+            <circle cx="9" cy="4.5" r="2" stroke="currentColor" strokeWidth="1.4"/>
+            <path d="M1 11c0-2 1.8-3.5 4-3.5s4 1.5 4 3.5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/>
+            <path d="M9 7.5c1.2.4 2.2 1.5 2.5 3" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/>
+          </svg>
+          About Us
         </button>
       </div>
 
