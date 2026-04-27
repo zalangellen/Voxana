@@ -7,23 +7,23 @@ const AGENTS = [
   },
   {
     name: 'Classifier',
-    desc: 'Receives the raw transcript and organises it into structured clinical sections in real time — chief complaint, anamnesis, status, diagnosis, plan. The physician sees their dictation classified and structured as they speak, not after.',
+    desc: 'Receives the raw transcript and organises it into structured clinical sections in real time: chief complaint, anamnesis, status, diagnosis, plan. The physician sees their dictation classified and structured as they speak, not after.',
   },
   {
     name: 'Medical NLP',
-    desc: "Receives the classified content and applies specialty-specific clinical intelligence. Colloquial language is converted to correct medical terminology. Diagnoses are mapped to ICD-10 codes — the international standard that operates identically across every market Voxana enters.",
+    desc: "Receives the classified content and applies specialty-specific clinical intelligence. Colloquial language is converted to correct medical terminology. Diagnoses are mapped to ICD-10 codes, the international standard that operates identically across every market Voxana enters.",
   },
   {
     name: 'Structurer',
-    desc: "Receives the processed clinical content alongside any uploaded supporting documents — lab results, imaging reports, previous records — and fills the physician's own template. Only explicitly verified information is used. Every filled field is tagged with its exact source. Fields that cannot be confirmed are left blank.",
+    desc: "Receives the processed clinical content alongside any uploaded supporting documents (lab results, imaging reports, previous records) and fills the physician's own template. Only explicitly verified information is used. Every filled field is tagged with its exact source. Fields that cannot be confirmed are left blank.",
   },
   {
     name: 'Validator',
-    desc: 'Reviews the structured output before the physician sees it. Flags missing mandatory fields, implausible numeric values, and internal inconsistencies — but does not correct. The physician remains in control of every decision.',
+    desc: 'Reviews the structured output before the physician sees it. Flags missing mandatory fields, implausible numeric values, and internal inconsistencies, but does not correct. The physician remains in control of every decision.',
   },
   {
     name: 'Summarizer',
-    desc: "Produces the final approved document in the physician's chosen format — structured text, PDF, or clipboard-ready output compatible with existing practice management and EHR systems.",
+    desc: "Produces the final approved document in the physician's chosen format: structured text, PDF, or clipboard-ready output compatible with existing practice management and EHR systems.",
   },
 ]
 
@@ -77,7 +77,7 @@ export default function StepAbout({ active }) {
 
           <p>
             The physician dictates short voice clips during or after the consultation. From that
-            point, a pipeline of six specialised AI agents takes over — each with a defined role
+            point, a pipeline of six specialised AI agents takes over, each with a defined role
             and a defined scope.
           </p>
 
@@ -105,7 +105,7 @@ export default function StepAbout({ active }) {
           <p>
             The architecture is built for international scale from the ground up. ICD-10 support
             means the same six-agent pipeline operates in Hungary, Romania, Slovakia, Poland,
-            Germany, or any market that uses the international coding standard — which is most
+            Germany, or any market that uses the international coding standard, which is most
             of the world. Adding a new language requires updating one agent. Adding a new
             specialty requires updating one knowledge base. The marginal cost of serving one
             additional physician anywhere in the world is under one euro per month.
